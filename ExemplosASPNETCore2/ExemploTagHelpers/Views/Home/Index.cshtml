@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Teste envolvendo o uso de Tag Helpers</h2>
+<br />
+<p style="font-size: 22px;">
+    @Html.ActionLink("Sobre - Utilizando HTML Helper", "About", "Home")
+</p>
+<br />
+<p style="font-size: 22px;">
+    <a asp-controller="Home" asp-action="About">Sobre - Utilizando Tag Helper</a>
+</p>

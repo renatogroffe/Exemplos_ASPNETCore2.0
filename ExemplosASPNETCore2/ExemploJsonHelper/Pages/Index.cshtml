@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h3>
+    Aplicação criada com o objeto de se demonstrar o uso
+    do Helper Json no ASP.NET Core 2.0
+</h3>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            exibirInformacoesPais(@Json.Serialize(TempData["DadosBrasil"]));
+        });
+
+        function exibirInformacoesPais(dadosPais) {
+            alert("País: " + dadosPais.nome + "\n" +
+                  "Continente: " + dadosPais.continente + "\n" +
+                  "Capital: " + dadosPais.capital + "\n" +
+                  "Código Telefônico: " + dadosPais.codigoTelefonico);
+        }
+
+    </script>
+
+}

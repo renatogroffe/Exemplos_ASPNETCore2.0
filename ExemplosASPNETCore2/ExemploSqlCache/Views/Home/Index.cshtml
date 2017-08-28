@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Cache distribuído com SQL Server</h2>
+
+<h3>
+    <b>Valor da chave TesteString:</b>
+    @ViewBag.TesteString
+</h3>
+
+<h3>
+    <b>Valor da chave TesteObjetoComplexo:</b>
+    {Texto: @ViewBag.ObjetoComplexo.Texto,
+    ValorInteiro: @ViewBag.ObjetoComplexo.ValorInteiro,
+    ValorNumerico: @ViewBag.ObjetoComplexo.ValorNumerico}
+</h3>

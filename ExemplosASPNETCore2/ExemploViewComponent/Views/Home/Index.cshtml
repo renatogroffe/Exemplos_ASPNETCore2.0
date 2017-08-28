@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Teste envolvendo o uso de View Components no ASP.NET Core 2.0</h2>
+
+<p>
+    <h2>Novas tecnologias:</h2>
+</p>
+@await Component.InvokeAsync("Lista", new { sequencia = ".NET Core 2.0|ASP.NET Core 2.0|Angular|React" })
+
+<p>
+    <h2>Bancos NoSQL:</h2>
+</p>
+
+@addTagHelper "*, ExemploViewComponent"
+
+<vc:Lista sequencia="DocumentDB|MongoDB|RavenDB"></vc:Lista>

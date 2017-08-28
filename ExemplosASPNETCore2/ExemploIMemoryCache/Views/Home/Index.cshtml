@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Teste de utilização da interface IMemoryCache</h2>
+<h3>
+    <b>Data/Hora da última atualização da View:</b>
+    @DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+</h3>
+
+<h3>
+    <b>Conteúdo do objeto armazenado em cache:</b>
+    @ViewBag.TesteCache.ToString("dd/MM/yyyy HH:mm:ss")
+</h3>

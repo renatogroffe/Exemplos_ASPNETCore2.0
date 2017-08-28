@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+    Personagem personagem = (Personagem)TempData["Personagem"];
+}
+
+<div style="overflow: hidden; margin-top: 50px;">
+    <div style="float: left; margin-right: 50px;">
+        <img src="@personagem.UrlImagem" height="200" width="200" />
+    </div>
+    <div style="margin-left: 50px;">
+        <h2><a href="@personagem.UrlWiki">@personagem.Nome</a></h2>
+        <p>@personagem.Descricao</p>
+    </div>
+</div>

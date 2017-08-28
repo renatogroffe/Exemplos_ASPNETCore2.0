@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Teste de utilização da tag cache</h2>
+<h3>
+    <b>Hora do último acesso:</b>
+    @DateTime.Now.ToString("HH:mm:ss")
+</h3>
+<cache expires-after="@TimeSpan.FromSeconds(20)">
+    <h3>
+        <b>Hora de última atualização do cache:</b>
+        @DateTime.Now.ToString("HH:mm:ss")
+    </h3>
+</cache>

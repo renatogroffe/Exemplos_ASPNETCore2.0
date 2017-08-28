@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2>Teste - Injeção de Dependências no ASP.NET Core 2.0</h2>
+
+<h3>Controller:</h3>
+
+<p>
+    <b>Objeto A:</b> @ViewBag.ObjetoA.IdReferencia
+</p>
+<p>
+    <b>Objeto B:</b> @ViewBag.ObjetoB.IdReferencia
+</p>
+<p>
+    <b>Objeto C:</b> @ViewBag.ObjetoC.IdReferencia
+</p>
+
+@inject ITesteA ObjA
+@inject ITesteB ObjB
+@inject TesteC ObjC
+
+<h3>View:</h3>
+
+<p>
+    <b>Objeto A:</b> @ObjA.IdReferencia
+</p>
+<p>
+    <b>Objeto B:</b> @ObjB.IdReferencia
+</p>
+<p>
+    <b>Objeto C:</b> @ObjC.IdReferencia
+</p>

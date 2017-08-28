@@ -1,0 +1,14 @@
+﻿@model IEnumerable<string>
+
+<style type="text/css">
+    li {
+        font-size: 22px;
+    }
+</style>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+</ul>
