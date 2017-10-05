@@ -36,6 +36,8 @@ namespace ExemploCompressao
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseResponseCompression();
+
             app.UseMvc();
         }
     }
